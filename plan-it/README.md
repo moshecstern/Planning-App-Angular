@@ -15,6 +15,11 @@ Third step: angular.json add "node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 ng g c componentName
 
+"ng g c componentName --skipTests true" will create folder structure without the test file attatched
+
+"ng g c folderName/componentName" will place files in subfolder
+
+
 
 
 
