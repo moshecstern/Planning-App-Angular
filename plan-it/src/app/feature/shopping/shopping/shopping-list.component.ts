@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-shopping',
-  templateUrl: './shopping.component.html',
-  styleUrls: ['./shopping.component.css']
+  selector: 'app-shopping-list',
+  templateUrl: './shopping-list.component.html',
+  styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingComponent implements OnInit {
 
