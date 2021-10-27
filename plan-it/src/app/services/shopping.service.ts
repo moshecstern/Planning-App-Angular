@@ -6,11 +6,16 @@ export class ShoppingService {
 // ingredientSelected = new EventEmitter<Ingredient>();
 // ingredientChanged = new EventEmitter<Ingredient[]>();
 ingredientChanged = new Subject<Ingredient[]>();
+startedEditing = new Subject<number>();
 
     private ingredient: Ingredient[] = [
         new Ingredient('Apples', 5),
         new Ingredient('Oranges', 10)
       ];
+
+      getIngredient(index: number) {
+        return this.ingredient[index];
+      }
 
       getIngredients() {
           return this.ingredient.slice();
@@ -26,5 +31,15 @@ ingredientChanged = new Subject<Ingredient[]>();
       addIngredients(ingredients: Ingredient[]) {
         this.ingredient.push(...ingredients);
         this.ingredientChanged.next(this.ingredient.slice());
+    }
+
+    updateIngredient(index: number, newIngredient: Ingredient) {
+      this.ingredient[index] = newIngredient;
+      this.ingredientChanged.next(this.ingredient.slice());
+    }
+
+    deleteIngredient(index: number) {
+      this.ingredient.splice(index, 1);
+      this.ingredientChanged.next(this.ingredient.slice());
     }
 }
