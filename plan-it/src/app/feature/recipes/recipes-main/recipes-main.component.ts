@@ -1,12 +1,10 @@
-import { RecipeService } from './../../../services/recipes.service';
 import { Component, OnInit } from '@angular/core';
 // import { Recipe } from 'src/app/services/models/recipe.model';
 
 @Component({
   selector: 'app-recipes-main',
   templateUrl: './recipes-main.component.html',
-  styleUrls: ['./recipes-main.component.css'],
-  providers: [RecipeService]
+  styleUrls: ['./recipes-main.component.css']
 })
 export class RecipesMainComponent implements OnInit {
   // recipes: Recipe[] = [

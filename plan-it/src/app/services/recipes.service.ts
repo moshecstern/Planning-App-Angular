@@ -10,26 +10,32 @@ export class RecipeService {
 // recipeSelected = new EventEmitter<Recipe>();
 // recipeSelected = new Subject<Recipe>();
 recipesChanged = new Subject<Recipe[]>();
+private recipes: Recipe[] = [];
 
-    private   recipes: Recipe[] = [
-        new Recipe(
-            'A Test Recipe', 'This is a test description',
-            'https://journalistsresource.org/wp-content/uploads/2015/10/Chain-link.jpg',
-            [
-                new Ingredient('Meat', 1),
-                new Ingredient('Soup', 55),
-            ]
-    ),
-        new Recipe(
-            'Another Test Recipe', 'This is a test description',
-            'https://journalistsresource.org/wp-content/uploads/2015/10/Chain-link.jpg',
-            [
-                    new Ingredient('Oil', 3),
-                    new Ingredient('Soup Nuts', 1),
-            ])
-      ];
+    // private   recipes: Recipe[] = [
+    //     new Recipe(
+    //         'A Test Recipe', 'This is a test description',
+    //         'https://journalistsresource.org/wp-content/uploads/2015/10/Chain-link.jpg',
+    //         [
+    //             new Ingredient('Meat', 1),
+    //             new Ingredient('Soup', 55),
+    //         ]
+    // ),
+    //     new Recipe(
+    //         'Another Test Recipe', 'This is a test description',
+    //         'https://journalistsresource.org/wp-content/uploads/2015/10/Chain-link.jpg',
+    //         [
+    //                 new Ingredient('Oil', 3),
+    //                 new Ingredient('Soup Nuts', 1),
+    //         ])
+    //   ];
 
       constructor(private slService: ShoppingService) {}
+
+      setRecipes(recipes: Recipe[]) {
+        this.recipes = recipes;
+        this.recipesChanged.next(this.recipes.slice());
+      }
 
       getRecipes() {
           return this.recipes.slice();

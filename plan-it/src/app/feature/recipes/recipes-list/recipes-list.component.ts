@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./recipes-list.component.css']
 })
 export class RecipesListComponent implements OnInit {
-  recipes: Recipe[] = [];
+  recipes: Recipe[];
   subscription: Subscription;
   constructor(
     private recipeService: RecipeService,
