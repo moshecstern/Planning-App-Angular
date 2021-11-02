@@ -1,3 +1,5 @@
+import { AuthGuard } from './services/auth/auth.guard';
+import { AuthComponent } from './services/auth/auth.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RecipeDefaultComponent } from './feature/recipes/recipe-default/recipe-default.component';
@@ -12,6 +14,7 @@ const appRoutes: Routes = [
   {
     path: 'recipes',
     component: RecipesMainComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: '', component: RecipeDefaultComponent },
       { path: 'new', component: RecipeEditComponent },
@@ -27,7 +30,8 @@ const appRoutes: Routes = [
       }
     ]
   },
-  { path: 'shopping-list', component: ShoppingMainComponent }
+  { path: 'shopping-list', component: ShoppingMainComponent },
+  { path: 'auth', component: AuthComponent }
 ];
 
 @NgModule({

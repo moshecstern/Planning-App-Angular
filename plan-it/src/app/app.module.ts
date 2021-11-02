@@ -1,3 +1,6 @@
+import { AlertComponent } from './shared/alert/alert.component';
+import { AuthInterceptorService } from './services/auth/auth-interceptor.service';
+import { LoadingSpinner } from './shared/loadingSpinner/loading-spinner.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,7 +19,9 @@ import { ShoppingService } from './services/shopping.service';
 import { RecipeDefaultComponent } from './feature/recipes/recipe-default/recipe-default.component';
 import { RecipeEditComponent } from './feature/recipes/recipe-edit/recipe-edit.component';
 import { RecipeService } from './services/recipes.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthComponent } from './services/auth/auth.component';
+import { PlaceholderDirective } from './shared/placeholder/placeholder.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,11 @@ import { HttpClientModule } from '@angular/common/http';
     ShoppingMainComponent,
     DropdownDirective,
     RecipeDefaultComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    AuthComponent,
+    LoadingSpinner,
+    AlertComponent,
+    PlaceholderDirective
   ],
   imports: [
     BrowserModule,
@@ -40,7 +49,18 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [ShoppingService, RecipeService],
-  bootstrap: [AppComponent]
+  providers: [
+    ShoppingService,
+    RecipeService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }
+  ],
+  bootstrap: [AppComponent],
+  // entryComponents: [
+  //   AlertComponent
+  // ]
 })
 export class AppModule { }
