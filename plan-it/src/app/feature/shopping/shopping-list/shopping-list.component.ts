@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './shopping-list.component.html',
   styleUrls: ['./shopping-list.component.css']
 })
-export class ShoppingComponent implements OnInit, OnDestroy {
+export class ShoppingListComponent implements OnInit, OnDestroy {
   ingredients: Ingredient[] = [ ];
   private subscription: Subscription;
 
