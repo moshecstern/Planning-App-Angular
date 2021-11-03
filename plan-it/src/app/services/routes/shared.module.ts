@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { PlaceholderDirective } from 'src/app/shared/placeholder/placeholder.directive';
-import { LoadingSpinner } from './loadingSpinner/loading-spinner.component';
-import { HeaderComponent } from './header/header.component';
-import { DropdownDirective } from './dropdown/dropdown.directive';
-import { AlertComponent } from './alert/alert.component';
+import { PlaceholderDirective } from '../../shared/placeholder/placeholder.directive';
+import { LoadingSpinner } from '../../shared/loadingSpinner/loading-spinner.component';
+import { HeaderComponent } from '../../shared/header/header.component';
+import { DropdownDirective } from '../../shared/dropdown/dropdown.directive';
+import { AlertComponent } from '../../shared/alert/alert.component';
 import { NgModule } from "@angular/core";
 
 @NgModule({
@@ -22,7 +22,8 @@ import { NgModule } from "@angular/core";
     DropdownDirective,
     HeaderComponent,
     LoadingSpinner,
-    PlaceholderDirective
+    PlaceholderDirective,
+    CommonModule
   ],
   entryComponents: [
     AlertComponent

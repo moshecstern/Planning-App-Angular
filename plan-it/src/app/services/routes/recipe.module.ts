@@ -9,7 +9,7 @@ import { RecipesMainComponent } from '../../feature/recipes/recipes-main/recipes
 import { RecipeDefaultComponent } from '../../feature/recipes/recipe-default/recipe-default.component';
 import { RecipeEditComponent } from '../../feature/recipes/recipe-edit/recipe-edit.component';
 import { RecipeRoutingModule } from './recipes-routing.module';
-import { SharedModule } from '../../shared/shared.module';
+import { SharedModule } from './shared.module';
 
 @NgModule({
     declarations: [

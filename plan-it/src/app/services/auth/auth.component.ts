@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 import { Component, ComponentFactoryResolver, OnDestroy, ViewChild } from "@angular/core";
 import { Observable, Subscription } from 'rxjs';
 import { Router } from '@angular/router';
-import { PlaceholderDirective } from 'src/app/shared/placeholder/placeholder.directive';
+import { PlaceholderDirective } from '../../shared/placeholder/placeholder.directive';
 
 @Component({
   selector: 'app-auth',

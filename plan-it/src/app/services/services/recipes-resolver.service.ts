@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Recipe } from 'src/app/services/models/recipe.model';
+import { Recipe } from '../../services/models/recipe.model';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from "@angular/router";
 import { DataStorageService } from './data-storage.service';
 import { RecipeService } from './recipes.service';

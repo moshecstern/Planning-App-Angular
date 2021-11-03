@@ -1,11 +1,9 @@
 import {
-    Component, OnDestroy, OnInit,
-    // EventEmitter,
-    // Output
+    Component, OnDestroy, OnInit
 } from "@angular/core";
 import { Subscription } from "rxjs";
-import { AuthService } from "src/app/services/auth/auth.service";
-import { DataStorageService } from "src/app/services/services/data-storage.service";
+import { AuthService } from "../../services/auth/auth.service";
+import { DataStorageService } from "../../services/services/data-storage.service";
 
 @Component({
     selector: 'app-header',

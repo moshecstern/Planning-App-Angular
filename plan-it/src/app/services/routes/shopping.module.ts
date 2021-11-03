@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 
-import { SharedModule } from '../../shared/shared.module';
+import { SharedModule } from './shared.module';
 import { ShoppingEditComponent } from "../../feature/shopping/shopping-edit/shopping-edit.component";
 import { ShoppingListComponent } from "../../feature/shopping/shopping-list/shopping-list.component";
 import { ShoppingMainComponent } from "../../feature/shopping/shopping-main/shopping-main.component";

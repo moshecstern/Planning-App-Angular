@@ -1,5 +1,6 @@
+import { HeaderComponent } from './shared/header/header.component';
 import { FeaturesModule } from './features.module';
-import { SharedModule } from './shared/shared.module';
+import { SharedModule } from './services/routes/shared.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './services/routes/app-routing.module';
