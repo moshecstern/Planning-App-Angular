@@ -1,6 +1,6 @@
 // import { EventEmitter } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Ingredient } from './models/ingredient.model';
+import { Ingredient } from '../models/ingredient.model';
 
 export class ShoppingService {
 // ingredientSelected = new EventEmitter<Ingredient>();

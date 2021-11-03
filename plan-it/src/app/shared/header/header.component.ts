@@ -5,7 +5,7 @@ import {
 } from "@angular/core";
 import { Subscription } from "rxjs";
 import { AuthService } from "src/app/services/auth/auth.service";
-import { DataStorageService } from "src/app/services/data-storage.service";
+import { DataStorageService } from "src/app/services/services/data-storage.service";
 
 @Component({
     selector: 'app-header',

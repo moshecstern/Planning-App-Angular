@@ -1,11 +1,11 @@
-import { SharedModule } from './../../shared/shared.module';
-import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
-import { ShoppingEditComponent } from "./shopping-edit/shopping-edit.component";
-import { ShoppingListComponent } from "./shopping-list/shopping-list.component";
-import { ShoppingMainComponent } from "./shopping-main/shopping-main.component";
+
+import { SharedModule } from '../../shared/shared.module';
+import { ShoppingEditComponent } from "../../feature/shopping/shopping-edit/shopping-edit.component";
+import { ShoppingListComponent } from "../../feature/shopping/shopping-list/shopping-list.component";
+import { ShoppingMainComponent } from "../../feature/shopping/shopping-main/shopping-main.component";
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { ShoppingMainComponent } from "./shopping-main/shopping-main.component";
     SharedModule,
     FormsModule,
     RouterModule.forChild([
-    {path: 'shopping-list', component: ShoppingMainComponent }
+    {path: '', component: ShoppingMainComponent }
   ])
 ]
   // imports: [RouterModule, CommonModule, ReactiveFormsModule],
