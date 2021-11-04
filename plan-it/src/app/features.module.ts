@@ -13,6 +13,6 @@ import { ShoppingService } from "./services/services/shopping.service";
       useClass: AuthInterceptorService,
       multi: true
     }
-  ],
+  ]
 })
 export class FeaturesModule {}

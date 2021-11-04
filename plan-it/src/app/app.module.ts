@@ -1,4 +1,4 @@
-import { HeaderComponent } from './shared/header/header.component';
+import { HeaderComponent } from './feature/core/header/header.component';
 import { FeaturesModule } from './features.module';
 import { SharedModule } from './services/routes/shared.module';
 import { NgModule } from '@angular/core';
@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
